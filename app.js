@@ -22,17 +22,17 @@ const feedRoutes = require("./routes/feed");
 const authRoutes = require("./routes/auth");
 
 // tao file log
-const accessLogStream = fs.createWriteStream(
-  path.join(__dirname),
-  "access.log",
-  // a nghia la append (them vao)
-  { flag: "a" }
-);
+// const accessLogStream = fs.createWriteStream(
+//   path.join(__dirname),
+//   "access.log",
+//   // a nghia la append (them vao)
+//   { flag: "a" }
+// );
 
 const app = express();
 app.use(helmet());
 app.use(compression());
-app.use(morgan("combined", { stream: accessLogStream }));
+// app.use(morgan("combined", { stream: accessLogStream }));
 
 app.use(
   cors({
