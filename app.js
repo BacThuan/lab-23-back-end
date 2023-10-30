@@ -36,7 +36,7 @@ app.use(morgan("combined", { stream: accessLogStream }));
 app.use(
   cors({
     origin: "https://technotes-52tj.onrender.com",
-    methods: ["POST", "GET", "PUT", "OPTIONS", "HEAD", "DELETE"],
+    methods: ["POST", "GET", "PUT", "OPTIONS", "HEAD", "DELETE","PATCH"],
     credentials: true,
   })
 );
